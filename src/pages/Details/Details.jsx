@@ -81,7 +81,7 @@ const Details = () => {
     return (
         <div>
 
-            <div className='grid grid-cols-2  my-10'>
+            <div className='grid lg:grid-cols-2  my-10'>
                 <div>
                     <img src={image} className='rounded-xl w-full h-full' alt="" />
                 </div>
@@ -101,7 +101,7 @@ const Details = () => {
                         <ToastContainer />
                     </div>
 
-                    <div className="stats shadow w-full mt-6">
+                    <div className="stats shadow w-full mt-6 hidden md:block">
                         <div className="stat">
                             <div className="stat-figure text-primary">
                                 <svg
