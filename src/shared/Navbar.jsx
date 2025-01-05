@@ -12,27 +12,84 @@ const Navbar = () => {
     const links = <>
 
 
-        <div>
+        
             {
                 user && user?.email ? (
-                    <div className='flex'>
-                        <NavLink ><li className='text-md font-semibold'><a>Home</a></li></NavLink>
-                        <NavLink to={'/findTutors'}><li className='text-md font-semibold'><a>Find tutors</a></li></NavLink>
-                        <NavLink to={'/addtutorials'}><li className='text-md font-semibold'><a> Add Tutorials</a></li></NavLink>
-                        <NavLink to={'/myTutorials'}><li className='text-md font-semibold'><a>My Tutorials</a></li></NavLink>
-                        <NavLink to={'/myBookedTutors'}><li className='text-md font-semibold'><a>My booked tutors</a></li></NavLink>
+                    <div className='lg:flex'>
+
+                        <NavLink to='/' className={({ isActive }) =>
+                            isActive ? " border-b-4 border-[#A4DBC1] " : ""
+                        }>
+                            <li><p className='text-lg font-semibold'>Home</p></li>
+                        </NavLink>
+
+
+                        <NavLink to='/findTutors' className={({ isActive }) =>
+                            isActive ? " border-b-4 border-[#A4DBC1] " : ""
+                        }>
+                            <li><p className='text-lg font-semibold'>Find tutors</p></li>
+                        </NavLink>
+
+
+                        <NavLink to='/addtutorials' className={({ isActive }) =>
+                            isActive ? " border-b-4 border-[#A4DBC1] " : ""
+                        }>
+                            <li><p className='text-lg font-semibold'>Add Tutorials</p></li>
+                        </NavLink>
+
+
+                        <NavLink to='/myTutorials' className={({ isActive }) =>
+                            isActive ? " border-b-4 border-[#A4DBC1] " : ""
+                        }>
+                            <li><p className='text-lg font-semibold'>My Tutorials</p></li>
+                        </NavLink>
+
+
+                        <NavLink to='/myBookedTutors' className={({ isActive }) =>
+                            isActive ? " border-b-4 border-[#A4DBC1] " : ""
+                        }>
+                            <li><p className='text-lg font-semibold'>My booked tutors</p></li>
+                        </NavLink>
+
+
+
 
                     </div>
                 ) : (
                     <div className='flex'>
-                        <NavLink ><li className='text-md font-semibold'><a>Home</a></li></NavLink>
+
+                        <NavLink to='/' className={({ isActive }) =>
+                            isActive ? " border-b-4 border-[#A4DBC1] " : ""
+                        }>
+                            <li><p className='text-lg font-semibold'>Home</p></li>
+                        </NavLink>
+                        <NavLink to='/findTutors' className={({ isActive }) =>
+                            isActive ? " border-b-4 border-[#A4DBC1] " : ""
+                        }>
+                            <li><p className='text-lg font-semibold'>Find tutors</p></li>
+                        </NavLink>
+                        <NavLink  className={({ isActive }) =>
+                            isActive ? " border-b-4 border-[#A4DBC1] " : ""
+                        }>
+                            <li><p className='text-lg font-semibold'>About Us</p></li>
+                        </NavLink>
+                        <NavLink className={({ isActive }) =>
+                            isActive ? " border-b-4 border-[#A4DBC1] " : ""
+                        }>
+                            <li><p className='text-lg font-semibold'>Contract Us</p></li>
+                        </NavLink>
+
+
+
+
+                        {/* <NavLink ><li className='text-md font-semibold'><a>Home</a></li></NavLink>
                         <NavLink to={'/findTutors'}><li className='text-md font-semibold'><a>Find tutors</a></li></NavLink>
                         <NavLink to={'/findTutors'}><li className='text-md font-semibold'><a>About Us</a></li></NavLink>
-                        <NavLink to={'/findTutors'}><li className='text-md font-semibold'><a>Contract Us</a></li></NavLink>
+                        <NavLink to={'/findTutors'}><li className='text-md font-semibold'><a>Contract Us</a></li></NavLink> */}
                     </div>
                 )
             }
-        </div>
+       
 
 
 
@@ -47,88 +104,102 @@ const Navbar = () => {
             })
             .catch((error) => {
                 // console.log('Error', error)
-                return('Error', error)
+                return ('Error', error)
             })
     }
 
 
     return (
 
-        <div className="navbar bg-base-100 grid grid-cols-10">
-            <div className=" col-span-1 navbar-start">
-                <div className="dropdown">
-                    <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="h-5 w-5"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor">
-                            <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                strokeWidth="2"
-                                d="M4 6h16M4 12h8m-8 6h16" />
-                        </svg>
-                    </div>
-                    <ul
-                        tabIndex={0}
-                        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                        {links}
-                    </ul>
+        <div className="navbar grid grid-cols-10 sticky top-0 z-40 backdrop-blur-xl bg-white/50">
+        <div className="col-span-1 navbar-start">
+            <div className="dropdown">
+                <div
+                    tabIndex={0}
+                    role="button"
+                    className="btn btn-ghost lg:hidden">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        className="h-5 w-5"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M4 6h16M4 12h8m-8 6h16" />
+                    </svg>
                 </div>
-                <Link to={'/'}><a  className="btn btn-ghost text-xl">daisyUI</a></Link>
-            </div>
-            <div className="col-span-7 items-center navbar-center">
-                <ul className="menu menu-horizontal px-1">
+                <ul
+                    tabIndex={0}
+                    className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                     {links}
                 </ul>
             </div>
-            <div className="col-span-2 ">
-                <div className=' mr-3'>
-                   
-                </div>
-                <TheamContoler></TheamContoler>
-
-                {
-                    user && user?.email ? (
-                        <div className="navbar-end space-x-4 flex items-center">
-                            <div className="dropdown dropdown-hover">
-                                <div>
-                                    {
-                                        user?.photoURL ? (
-                                            <img src={user.photoURL} alt="User Profile" className="h-8 w-8 rounded-full" />
-                                        ) : (
-                                            <CgProfile tabIndex={0} className="h-8 w-8" />
-                                        )
-                                    }
-
-                                </div>
-
-
-                                <ul
-                                    tabIndex={0}
-                                    className="dropdown-content menu bg-base-100 rounded-box z-[1] w-40 shadow left-0">
-                                    <li><h3><span className='font-bold'>Name:</span> {user.displayName}</h3></li>
-                                    <li><h3><span className='font-bold'>email:</span> {user.email}</h3></li>
-
-                                </ul>
-                            </div>
-                            <NavLink onClick={handleLogout}><a className="text-md font-semibold">Logout</a></NavLink>
-                        </div>
-
-                    ) : (
-                        <div className="navbar-end space-x-4 flex items-center">
-                            <div>
-                                <NavLink to={'/auth'}><a className="text-md font-semibold">Login</a></NavLink>
-                            </div>
-
-                        </div>
-                    )
-                }
-
-            </div>
+            <Link to="/" className="">
+                <svg
+                    width="50"
+                    height="50"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    className="fill-current">
+                    <path d="..." />
+                </svg>
+            </Link>
         </div>
+        <div className="col-span-7 items-center navbar-center hidden lg:block">
+            <ul className="menu menu-horizontal px-1">{links}</ul>
+        </div>
+        <div className="col-span-2">
+            <TheamContoler />
+            {user && user.email ? (
+                <div className="navbar-end space-x-4 flex items-center">
+                    <div className="dropdown dropdown-hover">
+                        <div>
+                            {user.photoURL ? (
+                                <img
+                                    src={user.photoURL}
+                                    alt="User Profile"
+                                    className="h-8 w-8 rounded-full"
+                                />
+                            ) : (
+                                <CgProfile tabIndex={0} className="h-8 w-8" />
+                            )}
+                        </div>
+                        <ul
+                            tabIndex={0}
+                            className="dropdown-content menu bg-base-100 rounded-box z-[1] w-40 shadow left-0">
+                            <li>
+                                <h3>
+                                    <span className="font-bold">Name:</span> {user.displayName}
+                                </h3>
+                            </li>
+                            <li>
+                                <h3>
+                                    <span className="font-bold">Email:</span> {user.email}
+                                </h3>
+                            </li>
+                        </ul>
+                    </div>
+                    <NavLink onClick={handleLogout}>
+                        <a className="text-md font-semibold">Logout</a>
+                    </NavLink>
+                </div>
+            ) : (
+
+                
+                <div className="navbar-end space-x-4 flex items-center">
+                    <NavLink to="/auth">
+                        <a className="text-md font-semibold">Login</a>
+                    </NavLink>
+                </div>
+            )}
+        </div>
+    </div>
+
     );
 };
 
