@@ -54,7 +54,7 @@ const Details = () => {
         };
 
 
-        fetch('http://localhost:5000/selected_tutor', {
+        fetch('https://learn-langauge-server.vercel.app/selected_tutor', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

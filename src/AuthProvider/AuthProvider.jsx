@@ -22,7 +22,7 @@ const AuthProvider = ({children}) => {
     // All learning data fetch
 
     useEffect(() =>{
-        fetch('http://localhost:5000/langauges')
+        fetch('https://learn-langauge-server.vercel.app/langauges')
         .then(res => res.json())
         .then(data => setLearning(data))
     
