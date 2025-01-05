@@ -18,7 +18,7 @@ const MyTutorials = () => {
     const {name, language, country, description, email, price, image} = myTutuiral;
     
     useEffect(()=>{
-        fetch(`https://learn-langauge-server.vercel.app/langauges?email=${user.email}`)
+        fetch(`https://langauge-tutor-server.onrender.com/langauges?email=${user.email}`)
         .then(res => res.json())
         .then(data => setmyTutuiral(data))
     },[user.email])

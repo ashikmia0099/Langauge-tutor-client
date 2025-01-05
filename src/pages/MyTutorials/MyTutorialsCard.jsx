@@ -37,7 +37,7 @@ const MyTutorialsCard = ({ tuturial }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`https://learn-langauge-server.vercel.app/langauges/${_id}`, {
+                fetch(`https://langauge-tutor-server.onrender.com/langauges/${_id}`, {
                     method: 'DELETE',
                     headers: {
                         'content-type': 'application/json'

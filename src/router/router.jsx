@@ -51,14 +51,14 @@ const router = createBrowserRouter([
       {
         path: '/updatemytuturial/:id',
         element: <PrivateRouter><UpdateMyTuturial></UpdateMyTuturial></PrivateRouter>,
-        loader: ({params}) => fetch(`https://learn-langauge-server.vercel.app/langauges/${params.id}`)
+        loader: ({params}) => fetch(`https://langauge-tutor-server.onrender.com/langauges/${params.id}`)
         
       },
       
       {
         path: '/details/:id',
         element: <PrivateRouter><Details></Details></PrivateRouter>,
-        loader: ({params}) => fetch(`https://learn-langauge-server.vercel.app/langauges/${params.id}`)
+        loader: ({params}) => fetch(`https://langauge-tutor-server.onrender.com/langauges/${params.id}`)
 
       },
       {

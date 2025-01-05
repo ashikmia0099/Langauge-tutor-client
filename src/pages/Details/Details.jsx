@@ -54,7 +54,7 @@ const Details = () => {
         };
 
 
-        fetch('https://learn-langauge-server.vercel.app/selected_tutor', {
+        fetch('https://langauge-tutor-server.onrender.com/selected_tutor', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

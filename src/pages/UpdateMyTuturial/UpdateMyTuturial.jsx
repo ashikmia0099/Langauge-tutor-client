@@ -34,7 +34,7 @@ const UpdateMyTuturial = () => {
             };
     
             
-            fetch(`https://learn-langauge-server.vercel.app/langauges/${_id}`, {
+            fetch(`https://langauge-tutor-server.onrender.com/langauges/${_id}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'

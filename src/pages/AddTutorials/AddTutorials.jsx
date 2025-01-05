@@ -38,7 +38,7 @@ const AddTutorials = () => {
         };
 
         
-        fetch('https://learn-langauge-server.vercel.app/langauges', {
+        fetch('https://langauge-tutor-server.onrender.com/langauges', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

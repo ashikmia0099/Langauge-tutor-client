@@ -24,7 +24,7 @@ const MyBookedTutors = () => {
 
 
     useEffect(() => {
-        fetch(`https://learn-langauge-server.vercel.app/selected_tutor?Email=${user.email}`)
+        fetch(`https://langauge-tutor-server.onrender.com/selected_tutor?Email=${user.email}`)
             .then(res => res.json())
             .then(data => {
                 // console.log('data', data);
@@ -37,7 +37,7 @@ const MyBookedTutors = () => {
 
 
     const handleReviewStatus = (tutorId) => {
-        fetch(`https://learn-langauge-server.vercel.app/review/${tutorId}`, {
+        fetch(`https://langauge-tutor-server.onrender.com/review/${tutorId}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
