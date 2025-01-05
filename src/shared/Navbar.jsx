@@ -4,6 +4,8 @@ import { CgProfile } from "react-icons/cg";
 import { AuthContext } from '../AuthProvider/AuthProvider';
 import TheamContoler from './TheamContoler';
 
+import logo from '../assets/bannerPageImage/logo.png';
+
 const Navbar = () => {
 
     const { user, setUser, LogOut } = useContext(AuthContext);
@@ -127,23 +129,13 @@ const Navbar = () => {
                     {links}
                 </ul>
             </div>
-            <Link to="/" className="">
-                    <svg
-                        width="50"
-                        height="50"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fillRule="evenodd"
-                        clipRule="evenodd"
-                        className="fill-current">
-                        <path d="..." />
-                    </svg>
-                </Link>
+            <Link to={'/'}><img src={logo} alt="Logo" className='mx-auto' /></Link>
+           
         </div>
-        <div className="col-span-7 items-center navbar-center hidden lg:block">
+        <div className="col-span-7 items-center navbar-center hidden lg:block ">
             <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
-        <div className="col-span-2 sm:navbar-end lg:block">
+        <div className="col-span-2  lg:flex">
             <TheamContoler />
             {user && user.email ? (
                 <div className="navbar-end space-x-4 flex items-center">
@@ -181,7 +173,7 @@ const Navbar = () => {
             ) : (
 
 
-                <div className="navbar-end space-x-4 flex items-center">
+                <div className="navbar-end space-x-4 flex items-end justify-end">
                     <NavLink to="/auth">
                         <a className="text-md font-semibold">Login</a>
                     </NavLink>
