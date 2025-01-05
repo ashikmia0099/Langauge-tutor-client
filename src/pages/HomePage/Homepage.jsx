@@ -39,14 +39,14 @@ const Homepage = () => {
 
             <div className='grid md:grid-cols-2 bg-black'>
                 <div className='space-x-10  items-center  mt-20'>
-                    <h1 className='md:text-4xl font-bold sm:text-2xl my-5 text-white'>Become fluent in any language </h1>
-                    <ul>
-                        <li className='flex items-center text-[#AFA89D] my-2 gap-3 font-semibold'><span><FaLightbulb className='text-red-400' /></span>Take customizable 1-on-1 lessons trusted by millions of users</li>
-                        <li className='flex items-center text-[#AFA89D] my-2 gap-3 font-semibold'><span><FaLightbulb className='text-red-400' /></span>Learn from certified teachers that fit your budget and schedule</li>
-                        <li className='flex items-center text-[#AFA89D] my-2 gap-3 font-semibold'><span><FaLightbulb className='text-red-400' /></span>Connect with a global community of language learners</li>
+                    <h1 className='md:text-4xl font-bold sm:text-3xl my-5 text-white'>Become fluent in any language </h1>
+                    <ul className='p-3'>
+                        <li className='flex items-start md:items-center text-[#AFA89D] my-2 gap-3 font-semibold'><span><FaLightbulb className='text-red-400' /></span>Take customizable 1-on-1 lessons trusted by millions of users</li>
+                        <li className='flex items-start md:items-center text-[#AFA89D] my-2 gap-3 font-semibold'><span><FaLightbulb className='text-red-400' /></span>Learn from certified teachers that fit your budget and schedule</li>
+                        <li className='flex items-start md:items-center text-[#AFA89D] my-2 gap-3 font-semibold'><span><FaLightbulb className='text-red-400' /></span>Connect with a global community of language learners</li>
 
                     </ul>
-                    <div className='text-left my-9'>
+                    <div className=' lg:text-left my-9'>
                         <Link to={'/findTutors'}><button className='btn px-10 bg-red-500 text-white font-semibold text-lg hover:bg-orange-400'>Start Now</button></Link>
 
                     </div>
@@ -62,24 +62,24 @@ const Homepage = () => {
 
             <div className='bg-[#181A1B] py-10'>
                 <div className='grid md:grid-cols-2 lg:grid-cols-4  text-white'>
-                    <div>
+                    <div className='mt-2'>
                         <h4 className='text-4xl font-bold'>50,000+</h4>
                         <p className='text-lg font-semibold'>Experienced tutors</p>
                     </div>
-                    <div>
+                    <div className='mt-2'>
                         <h4 className='text-4xl font-bold'>150+</h4>
                         <p className='text-lg font-semibold'>Tutor nationalities</p>
                     </div>
-                    <div>
+                    <div className='mt-2'>
                         <h4 className='text-4xl font-bold'>120+</h4>
                         <p className='text-lg font-semibold'>Subjects taught</p>
                     </div>
-                    <div>
+                    <div className='mt-2'>
                         <h4 className='text-4xl font-bold'>50,000+</h4>
                         <p className='text-lg font-semibold'>5-star tutor reviews</p>
                     </div>
                 </div>
-                <div className='grid grid-cols-3  my-6 mt-14 '>
+                <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3  my-6 mt-14 '>
                     {SingleLanguge.slice(0, 9).map((language, index) => (
                         <LangCategory key={index} language={language}></LangCategory>
                     ))}
@@ -89,9 +89,9 @@ const Homepage = () => {
             {/* section 3 */}
 
             <div className='bg-[#181A1B] py-10'>
-                <h1 className='text-white  text-5xl font-bold md:2xl '>See Our Professonal Teacher</h1>
+                <h1 className='text-white  md:text-5xl font-bold 3xl '>See Our Professonal Teacher</h1>
 
-                <div className='grid grid-cols-3 px-3 mt-16 '>
+                <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 px-3 mt-16 '>
                     {
                         Learning.slice(0, 6).map(learn => <BannerCard key={learn._id} learn={learn}></BannerCard>)
                     }
@@ -103,17 +103,17 @@ const Homepage = () => {
 
             {/* section 4 */}
 
-            <div className='grid grid-cols-2 bg-[#1E293B] py-14'>
+            <div className='lg:grid lg:grid-cols-2 bg-[#1E293B] py-14'>
                 <div className='mx-10'>
                     <img src={bannerImg1} alt="" className='h-96' />
                 </div>
-                <div className='text-white mx-5  text-left'>
-                    <h1 className='text-7xl font-bold text-red-300 w-2/3'>Become A Tutor</h1>
-                    <p className='text-lg font-semibold my-5'>Earn money sharing your expert knowledge with students. Sign up to start tutoring online with Preply.</p>
+                <div className='text-white mt-6 lg:mt-0 mx-5 text-center  lg:text-left'>
+                    <h1 className=' text-4xl lg:text-7xl font-bold text-red-300 lg:w-2/3'>Become A Tutor</h1>
+                    <p className='mt-5 text-lg font-semibold my-5'>Earn money sharing your expert knowledge with students. Sign up to start tutoring online with Preply.</p>
                     <ul>
-                        <li className='flex items-center text-[#AFA89D] my-2 gap-3 font-semibold'><span><FaLightbulb className='text-red-400' /></span>Take customizable 1-on-1 lessons trusted by millions of users</li>
-                        <li className='flex items-center text-[#AFA89D] my-2 gap-3 font-semibold'><span><FaLightbulb className='text-red-400' /></span>Learn from certified teachers that fit your budget and schedule</li>
-                        <li className='flex items-center text-[#AFA89D] my-2 gap-3 font-semibold'><span><FaLightbulb className='text-red-400' /></span>Connect with a global community of language learners</li>
+                        <li className='flex items-start lg:items-center text-[#AFA89D] my-2 gap-3 font-semibold'><span><FaLightbulb className='text-red-400' /></span>Take customizable 1-on-1 lessons trusted by millions of users</li>
+                        <li className='flex items-start lg:items-center text-[#AFA89D] my-2 gap-3 font-semibold'><span><FaLightbulb className='text-red-400' /></span>Learn from certified teachers that fit your budget and schedule</li>
+                        <li className='flex items-start lg:items-center text-[#AFA89D] my-2 gap-3 font-semibold'><span><FaLightbulb className='text-red-400' /></span>Connect with a global community of language learners</li>
 
                     </ul>
 

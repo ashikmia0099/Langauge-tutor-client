@@ -56,7 +56,7 @@ const Navbar = () => {
 
                     </div>
                 ) : (
-                    <div className='flex'>
+                    <div className='lg:flex'>
 
                         <NavLink to='/' className={({ isActive }) =>
                             isActive ? " border-b-4 border-[#A4DBC1] " : ""
@@ -111,7 +111,7 @@ const Navbar = () => {
 
     return (
 
-        <div className="navbar grid grid-cols-10 sticky top-0 z-40 backdrop-blur-xl bg-white/50">
+        <div className="navbar grid grid-cols-10 sticky top-0 z-40 backdrop-blur-xl bg-white/50 ">
         <div className="col-span-1 navbar-start">
             <div className="dropdown">
                 <div
@@ -138,22 +138,22 @@ const Navbar = () => {
                 </ul>
             </div>
             <Link to="/" className="">
-                <svg
-                    width="50"
-                    height="50"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fillRule="evenodd"
-                    clipRule="evenodd"
-                    className="fill-current">
-                    <path d="..." />
-                </svg>
-            </Link>
+                    <svg
+                        width="50"
+                        height="50"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        className="fill-current">
+                        <path d="..." />
+                    </svg>
+                </Link>
         </div>
         <div className="col-span-7 items-center navbar-center hidden lg:block">
             <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
-        <div className="col-span-2">
+        <div className="col-span-2 sm:navbar-end lg:block">
             <TheamContoler />
             {user && user.email ? (
                 <div className="navbar-end space-x-4 flex items-center">
@@ -190,7 +190,7 @@ const Navbar = () => {
                 </div>
             ) : (
 
-                
+
                 <div className="navbar-end space-x-4 flex items-center">
                     <NavLink to="/auth">
                         <a className="text-md font-semibold">Login</a>

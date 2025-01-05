@@ -50,7 +50,7 @@ const FindTutors = () => {
 
 
     return (
-        <div className='grid grid-cols-10 bg-[#181A1B]'>
+        <div className='lg:grid lg:grid-cols-10 bg-[#181A1B]'>
 
 
             <div className=' col-span-8'>
@@ -75,7 +75,7 @@ const FindTutors = () => {
                         </div>
                     </div>
 
-                    <div className='grid grid-cols-3 px-3 mt-16 '>
+                    <div className='grid md:grid-cols-3 lg:grid-col px-3 mt-16 '>
 
                         {
                             filterData.length > 0 ?
