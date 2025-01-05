@@ -69,7 +69,7 @@ const MyTutorialsCard = ({ tuturial }) => {
                 <div className=' lg:col-span-2 '>
                     <img src={image} className='rounded-lg  h-full w-full lg:h-44 lg:w-52 lg:m-4' alt="" />
                 </div>
-                <div className=' lg:col-span-3 pl-4 lg:pl-0 md:my-5 lg:my-0'>
+                <div className=' lg:col-span-4 pl-4 lg:pl-0 md:my-5 lg:my-0'>
                     <h2 className='text-2xl font-bold mt-2 lg:mt-0'>{language} Langauge Tutor</h2>
                     <div className='md:flex items-center gap-10'>
                         <h4 className='flex items-center text-xl font-semibold gap-2'> <span><IoPersonCircleSharp /></span > <span className='text-lg '> {name}</span></h4>
@@ -78,19 +78,23 @@ const MyTutorialsCard = ({ tuturial }) => {
                     <h4 className='flex items-center text-xl font-semibold gap-2'> <span><IoLocationSharp /></span > <span className='text-lg '> {country}</span></h4>
                     <h4 className='flex items-center text-2xl font-semibold gap-2'> <span><FaDollarSign /></span > <span className='text-2xl '> {price}</span></h4>
 
-                    
+
                 </div>
-                <div className=' lg:col-span-4 overflow-y-auto h-32 mx-4'>
+                <div className=' lg:col-span-3 overflow-y-auto h-32 mx-4'>
                     <h1 className='text-lg font-bold '>Description</h1>
                     <p className="py-4">{description}</p>
                 </div>
-                <div className=' lg:col-span-1 space-y-2 ml-5 '>
+                <div className=' lg:col-span-1 space-y-2 ml-5 lg:my-0 my-3 justify-between grid grid-cols-2 lg:grid-cols-1'>
 
 
-                    <Link to={`/updatemytuturial/${_id}`}><button className='btn w-24'>Edit</button></Link>
-                    
-                    <button onClick={() => handleDelete(_id)} className='btn w-24 bg-red-500 text-white'>Delete</button>
+                    <div className='col-span-1'>
+                        <Link to={`/updatemytuturial/${_id}`}><button className='btn w-24'>Edit</button></Link>
+                    </div>
 
+                    <div className=' col-span-1'>
+                        <button onClick={() => handleDelete(_id)} className='btn w-24 bg-red-500 text-white'>Delete</button>
+
+                    </div>
                 </div>
             </div>
         </div>
