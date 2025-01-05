@@ -24,7 +24,7 @@ const MyTutorialsCard = ({ tuturial }) => {
 
 
     const handleDelete = _id => {
-        console.log(_id)
+        // console.log(_id)
 
         Swal.fire({
             title: "Are you sure?",
@@ -46,7 +46,7 @@ const MyTutorialsCard = ({ tuturial }) => {
                 })
                     .then(res => res.json())
                     .then(data => {
-                        console.log(data);
+                        // console.log(data);
                         if (data.deletedCount > 0) {
 
                             Swal.fire({

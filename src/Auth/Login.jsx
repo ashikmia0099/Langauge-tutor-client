@@ -23,11 +23,12 @@ const Login = () => {
             setUser(user);
             
             navigate(from);
-            console.log(user)
+            // console.log(user)
 
         })
         .catch((error) =>{
-            console.log('ERROR', error)
+            // console.log('ERROR', error)
+            return('ERROR', error)
         })
     }
 
@@ -47,13 +48,15 @@ const Login = () => {
             const user = result.user;
             setUser(user);
             navigate(from);
-            console.log(user);
+            // console.log(user);
         })
         .catch((error) =>{
-            console.log('Error', error)
+            // console.log('Error', error)
+            return('Error', error)
         })
 
-        console.log('Sing in with email', email, password)
+        // console.log('Sing in with email', email, password)
+        return('Sing in with email', email, password)
     }
 
 

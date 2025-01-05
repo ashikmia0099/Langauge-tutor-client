@@ -27,7 +27,7 @@ const MyBookedTutors = () => {
         fetch(`http://localhost:5000/selected_tutor?Email=${user.email}`)
             .then(res => res.json())
             .then(data => {
-                console.log('data', data);
+                // console.log('data', data);
                 setBookedTutor(data);
             })
             .catch(error => console.error("Error fetching data:", error));
@@ -50,11 +50,11 @@ const MyBookedTutors = () => {
                 return res.json();
             })
             .then((data) => {
-                console.log('Review status updated:', data);
+                
                 toast.success("Review Added Successfully");
             })
             .catch((error) => {
-                console.error('Error updating review status:', error);
+                
                 toast.error("Failed to update review count!");
             });
     };

@@ -46,7 +46,8 @@ const Navbar = () => {
                 navigate("/auth/login")
             })
             .catch((error) => {
-                console.log('Error', error)
+                // console.log('Error', error)
+                return('Error', error)
             })
     }
 

@@ -13,7 +13,7 @@ const AddTutorials = () => {
 
     const handleAddTutor = e => {
         e.preventDefault();
-        console.log('Add a new tutor')
+        // console.log('Add a new tutor')
 
         const form = e.target;
         const name = form.name.value;
@@ -25,7 +25,7 @@ const AddTutorials = () => {
         const image = form.image.value;
         
 
-        console.log(name, language, country, description, email, price, image);
+        // console.log(name, language, country, description, email, price, image);
         const newTutorData = {
             name,
             language,
@@ -47,7 +47,7 @@ const AddTutorials = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                // console.log(data)
                 if (data.insertedId) {
                     Swal.fire({
                         title: "Tutor New Post Successfull",

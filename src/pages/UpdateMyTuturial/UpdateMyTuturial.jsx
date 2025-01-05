@@ -12,7 +12,7 @@ const UpdateMyTuturial = () => {
     
         const handleUpdateTutor = e => {
             e.preventDefault();
-            console.log('Update a new tutor')
+            // console.log('Update a new tutor')
 
             const form = e.target;
             const language = form.language.value;
@@ -22,7 +22,7 @@ const UpdateMyTuturial = () => {
             const image = form.image.value;
             
     
-            console.log( language, country, description, price, image);
+            // console.log( language, country, description, price, image);
             const UpdateTutorData = {
                 
                 language,
@@ -43,7 +43,7 @@ const UpdateMyTuturial = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data)
+                    // console.log(data)
                     if (data.modifiedCount > 0) {
                         Swal.fire({
                             title: "Tutor Post Update Successfull",

@@ -10,8 +10,8 @@ const LangugeFilterCard = () => {
     const { filterData, Learning } = useContext(AuthContext);
     const { language } = Learning;
 
-    console.log("Learning Data", Learning.length);
-    console.log('Filterd Data', filterData.length);
+    // console.log("Learning Data", Learning.length);
+    // console.log('Filterd Data', filterData.length);
 
     return (
         <div>
