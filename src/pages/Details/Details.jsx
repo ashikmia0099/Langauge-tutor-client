@@ -25,7 +25,8 @@ const Details = () => {
 
 
         // akhane check kora hocce ai user age ai tutor ke select korche ki na
-
+         
+        
 
         const checkTutorSelected = selectedTutor.some(tutor => tutor.tutorEmail === email);
 

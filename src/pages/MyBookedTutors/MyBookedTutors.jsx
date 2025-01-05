@@ -10,6 +10,7 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 import { toast } from 'react-toastify';
 import { ToastContainer } from 'react-toastify';
+import { AiOutlineLike } from "react-icons/ai";
 
 
 
@@ -85,15 +86,10 @@ const MyBookedTutors = () => {
                                     <h4 className='flex items-center text-xl font-semibold gap-2'> <span><IoLocationSharp /></span > <span className='text-lg '> Country: {tutor.Country} </span></h4>
                                     <h4 className='flex items-center text-2xl font-semibold gap-2'> <span><FaDollarSign /></span > <span className='text-2xl '> {tutor.Price}</span></h4>
 
-                                    <h5 className='text-lg mt-1 font-semibold '>
-                                        Total Review : {tutor.Review}
-                                    </h5>
+                                   
                                     <h5 className='text-3xl mt-1 flex gap-5'>
-                                        <button
-                                            onClick={() => handleReviewStatus(tutor.tutorId)}
-                                            className="btn btn-primary">
-                                            Mark Reviewed
-                                        </button>
+                                        <AiOutlineLike className='text-red-500 cursor-pointer'  onClick={() => handleReviewStatus(tutor.tutorId)}/>
+                                        
                                         <ToastContainer className=' text-sm font-semibold' />
 
                                     </h5>
