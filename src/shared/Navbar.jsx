@@ -103,7 +103,7 @@ const Navbar = () => {
 
     return (
 
-        <div className="navbar grid grid-cols-10 sticky top-0 z-40 backdrop-blur-xl bg-white/50 ">
+        <div className="navbar grid grid-cols-10 sticky top-0 z-40 lg:backdrop-blur-xl bg-white/50 ">
         <div className="col-span-1 navbar-start">
             <div className="dropdown">
                 <div
