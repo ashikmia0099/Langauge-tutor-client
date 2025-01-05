@@ -75,7 +75,7 @@ const FindTutors = () => {
                         </div>
                     </div>
 
-                    <div className='grid md:grid-cols-3 lg:grid-col px-3 mt-16 '>
+                    <div className='grid md:grid-cols-2 lg:grid-cols-3 px-3 mt-16 '>
 
                         {
                             filterData.length > 0 ?
@@ -96,7 +96,7 @@ const FindTutors = () => {
 
                 <div className='mt-24  border border-gray-300 py-10 rounded-lg h-[650px] '>
                     <h1 className='text-white font-semibold text-xl border-b border-gray-300 mb-2'>All Langauge</h1>
-                    <div className="grid grid-cols-2 overflow-y-scroll max-h-full items-center">
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-2 overflow-y-scroll max-h-full items-center">
                         <button onClick={allData} className="btn h-7 min-h-7 my-1 mx-1">All</button>
                         {SingleLanguge.map((language, index) => (
                             <button
