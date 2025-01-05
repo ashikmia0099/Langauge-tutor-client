@@ -73,13 +73,13 @@ const MyBookedTutors = () => {
                     bookedTutor.map((tutor, index, tutorId) =>
 
                         <div key={index}>
-                            <div className='grid grid-cols-5 text-left border border-gray-300 rounded-xl items-center my-4'>
-                                <div className=' col-span-1 '>
-                                    <img src={tutor.Image} className='rounded-lg h-44 w-52 m-4' alt="" />
+                            <div className='lg:grid lg:grid-cols-5 text-left border border-gray-300 rounded-xl items-center my-4'>
+                                <div className=' lg:col-span-1 '>
+                                    <img src={tutor.Image} className='rounded-lg h-full lg:h-44 w-full lg:w-52 lg:m-4' alt="" />
                                 </div>
-                                <div className=' col-span-3 ml-4'>
-                                    <h2 className='text-2xl font-bold'>{tutor.Langaute}</h2>
-                                    <div className='flex items-center gap-10'>
+                                <div className=' lg:col-span-3 ml-4'>
+                                    <h2 className='text-2xl font-bold'>{tutor.Langaute} Tutor</h2>
+                                    <div className='lg:flex items-center gap-10'>
                                         <h4 className='flex items-center text-xl font-semibold gap-2'> <span><IoPersonCircleSharp /></span > <span className='text-lg '>Name: {tutor.Name}</span></h4>
                                         <h4 className='flex items-center text-xl font-semibold gap-2'> <span><MdEmail /></span > <span className='text-lg '>Email: {tutor.tutorEmail}</span></h4>
                                     </div>
@@ -94,11 +94,9 @@ const MyBookedTutors = () => {
 
                                     </h5>
                                 </div>
-                                <div className=' col-span-1 space-y-2'>
-
-
-                                    <br />
-                                    <button className='btn w-24'>Delete</button>
+                                <div className=' lg:col-span-1 space-y-5 lg:space-y-2 px-4 lg:px-0'>
+                                    
+                                    <button className='btn lg:w-24 lg:my-0 my-4 w-full '>Delete</button>
                                 </div>
                             </div>
                         </div>

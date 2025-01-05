@@ -65,43 +65,31 @@ const MyTutorialsCard = ({ tuturial }) => {
 
     return (
         <div>
-            <div className='grid grid-cols-7 text-left border border-gray-300 rounded-xl items-center my-4'>
-                <div className=' col-span-2 '>
-                    <img src={image} className='rounded-lg h-44 w-52 m-4' alt="" />
+            <div className='lg:grid lg:grid-cols-10 text-left border border-gray-300 rounded-xl items-center my-4'>
+                <div className=' lg:col-span-2 '>
+                    <img src={image} className='rounded-lg  h-full w-full lg:h-44 lg:w-52 lg:m-4' alt="" />
                 </div>
-                <div className=' col-span-2'>
-                    <h2 className='text-2xl font-bold'>{language} Langauge Tutor</h2>
-                    <div className='flex items-center gap-10'>
+                <div className=' lg:col-span-3 pl-4 lg:pl-0 md:my-5 lg:my-0'>
+                    <h2 className='text-2xl font-bold mt-2 lg:mt-0'>{language} Langauge Tutor</h2>
+                    <div className='md:flex items-center gap-10'>
                         <h4 className='flex items-center text-xl font-semibold gap-2'> <span><IoPersonCircleSharp /></span > <span className='text-lg '> {name}</span></h4>
                         <h4 className='flex items-center text-xl font-semibold gap-2'> <span><MdEmail /></span > <span className='text-lg '> {email}</span></h4>
                     </div>
                     <h4 className='flex items-center text-xl font-semibold gap-2'> <span><IoLocationSharp /></span > <span className='text-lg '> {country}</span></h4>
                     <h4 className='flex items-center text-2xl font-semibold gap-2'> <span><FaDollarSign /></span > <span className='text-2xl '> {price}</span></h4>
 
-                    <h5 className=''>
-                        <div className="rating">
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                            <input
-                                type="radio"
-                                name="rating-2"
-                                className="mask mask-star-2 bg-orange-400"
-                                defaultChecked />
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                            <input type="radio" name="rating-2" className="mask mask-star-2 bg-orange-400" />
-                        </div>
-                    </h5>
+                    
                 </div>
-                <div className=' col-span-2 overflow-y-auto h-32 mx-4'>
+                <div className=' lg:col-span-4 overflow-y-auto h-32 mx-4'>
                     <h1 className='text-lg font-bold '>Description</h1>
                     <p className="py-4">{description}</p>
                 </div>
-                <div className=' col-span-1 space-y-2 ml-5'>
+                <div className=' lg:col-span-1 space-y-2 ml-5 '>
 
 
                     <Link to={`/updatemytuturial/${_id}`}><button className='btn w-24'>Edit</button></Link>
-                    <br />
-                    <button onClick={() => handleDelete(_id)} className='btn w-24'>Delete</button>
+                    
+                    <button onClick={() => handleDelete(_id)} className='btn w-24 bg-red-500 text-white'>Delete</button>
 
                 </div>
             </div>
