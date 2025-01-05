@@ -62,9 +62,9 @@ const Login = () => {
 
     return (
         <div className="card mx-auto items-center justify-center  w-full max-w-sm shrink-0 shadow-2xl col-span-1">
-        <div className='mx-5 my-4'>
+        <div className='lg:mx-5 lg:my-4'>
             <div className='text-left '>
-                <h1 className='text-3xl font-semibold text-white'>Login Your Account</h1>
+                <h1 className='text-2xl font-semibold text-white'>Login Your Account</h1>
                 <p className=' font-semibold text-gray-400 mt-4'>Don't have an account? <span className='text-white text-lg'><Link to='/auth/register'>Register</Link></span> </p>
             </div>
 
@@ -91,10 +91,10 @@ const Login = () => {
             <div className="form-control mt-6 mb-4">
                 <button className="btn bg-black border-none text-[#A4DBC1] text-xl font-semibold w-72 hover:rounded-full hover:bg-[#6b9481] hover:text-black">Login</button>
             </div>
-            <div className='flex  gap-4'>
-                <button className='btn' onClick={handlegoogleSignIn}> <FcGoogle /> Google</button>
-                <button className='btn'><FaFacebook className='text-[#005EFF]' />Facebook</button>
-                <button className='btn'> <FaApple /> Apple</button>
+            <div className=' md:flex  gap-4 '>
+                <button className='btn mt-2 mx-2' onClick={handlegoogleSignIn}> <FcGoogle /> Google</button>
+                <button className='btn mt-2 mx-2'><FaFacebook className='text-[#005EFF]' />Facebook</button>
+                <button className='btn mt-2 mx-2'> <FaApple /> Apple</button>
             </div>
         </form>
     </div>

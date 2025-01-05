@@ -68,24 +68,14 @@ const Navbar = () => {
                         }>
                             <li><p className='text-lg font-semibold'>Find tutors</p></li>
                         </NavLink>
-                        <NavLink  className={({ isActive }) =>
-                            isActive ? " border-b-4 border-[#A4DBC1] " : ""
-                        }>
-                            <li><p className='text-lg font-semibold'>About Us</p></li>
-                        </NavLink>
-                        <NavLink className={({ isActive }) =>
-                            isActive ? " border-b-4 border-[#A4DBC1] " : ""
-                        }>
-                            <li><p className='text-lg font-semibold'>Contract Us</p></li>
-                        </NavLink>
+                        <NavLink ><li className='text-lg font-semibold'><a>About Us</a></li></NavLink>
+                        <NavLink ><li className='text-lg font-semibold'><a>Contract Us</a></li></NavLink>
 
 
 
 
-                        {/* <NavLink ><li className='text-md font-semibold'><a>Home</a></li></NavLink>
-                        <NavLink to={'/findTutors'}><li className='text-md font-semibold'><a>Find tutors</a></li></NavLink>
-                        <NavLink to={'/findTutors'}><li className='text-md font-semibold'><a>About Us</a></li></NavLink>
-                        <NavLink to={'/findTutors'}><li className='text-md font-semibold'><a>Contract Us</a></li></NavLink> */}
+                      
+                       
                     </div>
                 )
             }
